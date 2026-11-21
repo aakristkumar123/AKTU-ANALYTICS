@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AKTU Placement Analytics</title>
+  <meta name="description" content="Statistical Analysis and Prediction of Placement Records of AKTU Affiliated Colleges" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Title banner -->
+  <header class="banner">
+    <div class="banner-inner">
+      <h1>🎓 AKTU PLACEMENT ANALYTICS</h1>
+      <p>Statistical Analysis and Prediction of Placement Records of AKTU Affiliated Colleges</p>
+    </div>
+  </header>
+
+  <!-- Sticky navigation: always visible, no sidebar, no hamburger -->
+  <nav class="topnav" aria-label="Main navigation">
+    <div class="navrow" id="navrow">
+      <button class="pill" data-action="nav" data-value="home"><span class="ico">🏠</span>Home</button>
+      <button class="pill" data-action="nav" data-value="college"><span class="ico">🏫</span>College Analysis</button>
+      <button class="pill" data-action="nav" data-value="stats"><span class="ico">📊</span>Statistics</button>
+      <button class="pill" data-action="nav" data-value="compare"><span class="ico">⚖️</span>Comparison</button>
+      <button class="pill" data-action="nav" data-value="predict"><span class="ico">🔮</span>Prediction</button>
+      <button class="pill" data-action="nav" data-value="eval"><span class="ico">🧪</span>Model Evaluation</button>
+      <button class="pill" data-action="nav" data-value="dataset"><span class="ico">🗂️</span>Dataset</button>
+    </div>
+  </nav>
+
+  <!-- Global setting: which placement % to use -->
+  <div class="settingsbar">
+    <span class="settings-label">Placement % source:</span>
+    <button class="chip" data-action="src" data-value="calc">Recomputed (placed ÷ total × 100)</button>
+    <button class="chip" data-action="src" data-value="csv">Use CSV value</button>
+  </div>
+
+  <main class="container">
+    <div id="status" class="status"></div>
+    <section id="page-home" class="page"></section>
+    <section id="page-college" class="page"></section>
+    <section id="page-stats" class="page"></section>
+    <section id="page-compare" class="page"></section>
+    <section id="page-predict" class="page"></section>
+    <section id="page-eval" class="page"></section>
+    <section id="page-dataset" class="page"></section>
+  </main>
+
+  <footer class="footer">
+    AKTU Placement Analytics · Static site (HTML + CSS + JavaScript) · College-level results use only rows where Branch = "Overall".
+  </footer>
+
+  <!-- Libraries from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <!-- Backup copy of the CSV (used only if fetch is blocked, e.g. double-click opening) -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
